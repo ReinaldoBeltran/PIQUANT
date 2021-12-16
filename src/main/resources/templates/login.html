@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>Piquant</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <link rel='stylesheet' type='text/css' media='screen' href='css/login.css'>
+
+</head>
+
+<body>
+
+  <header id="main-header">
+
+    <img id="piq1" src="img/ban1.PNG">
+
+
+  </header><!-- / #main-header -->
+
+  <section>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <article>
+
+    </article>
+  </section>
+  <section id="main-content">
+
+
+    <article>
+	<form  th:action="@{/formIngresar/validar}" th:object="${cliente}" method="post">
+      <div class="login">
+        <div class="login-screen">
+          <div class="app-title">
+
+            <img id="imageUsuario" src="img/usuario.png">
+          </div>
+          &nbsp;
+
+          <div class="login-form">
+            <div class="control-group">
+              <input th:field="*{correo}" type="text" class="login-field" value="" placeholder="Usuario" id="login-name">
+              <label class="login-field-icon fui-user" for="login-name"></label>
+            </div>
+            &nbsp;
+
+            <div class="control-group">
+              <input th:field="*{clave}" type="password" class="login-field" value="" placeholder="Contraseña" id="login-pass">
+              <label class="login-field-icon fui-lock" for="login-pass"></label>
+            </div>
+            &nbsp;
+            
+             <input type="submit"  class="btn btn-primary btn-large btn-block" value="ingresar" id="form_button" />
+
+        
+            <br>
+            <a id="no" class="login-link" th:href="@{/formRegistro}">¿No tienes cuenta? registrate aquí</a>
+
+          </div>
+
+        </div>
+      </div>
+      
+      </form>
+
+    </article> <!-- / article -->
+
+  </section><!-- / #main-content -->
+
+
+
+  <footer id="main-footer">
+    <div id="footer">
+
+      <div id="social_box">
+        <a href="https://www.facebook.com/"><img src="img/facebook.png" alt="facebook" /></a>
+
+        <a href="https://twitter.com/?lang=es"><img src="img/twitter.png" alt="twitter" /></a>
+        <a href="https://www.youtube.com/"><img src="img/youtube.png" alt="youtube" /></a>
+      </div>
+
+      <div id="footer_left">
+
+        Copyright © 2021
+        <br>
+        <a href="#" id="no1">Piquant Desing</a>
+
+
+
+      </div>
+    </div>
+  </footer><!-- / #main-footer -->
+
+</body>
+
+</html>
